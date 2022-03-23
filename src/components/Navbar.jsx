@@ -3,14 +3,7 @@ import "./navbar.css" ;
 import {useNavigate} from 'react-router-dom'
 
 
-const links = [
-  {
-    title: "Home",
-    link: "/",
-    id: "header-link-home",
-  },
-  //   add the other link as well
-];
+
 
 
 export const Navbar = () => {

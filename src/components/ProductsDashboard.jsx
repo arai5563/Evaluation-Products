@@ -52,7 +52,7 @@ export const Products = () => {
 
               <div className="container">
                 <div>
-                  <img src={c.image} />
+                  <img src={c.image} alt="wait-for Image to load" />
                 </div>
                 <div>
                   <h4>{c.brand}</h4>
