@@ -1,4 +1,4 @@
-import ActionTypes  from "./actionTypes";
+import { ActionTypes } from "./actionTypes";
 
 
 // action for get products request

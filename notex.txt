@@ -1,0 +1,7 @@
+<div className="products-list">
+        map throught th products  list and display the results
+        {data &&
+          data.map(() => {
+            return <div>{/* display the results here */}</div>;
+          })}
+      </div>
