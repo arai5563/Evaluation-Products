@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
+import "../components/product.css"
 
 import { getProductsReq } from "../Redux/actions";
 
@@ -12,14 +13,14 @@ export const Products = () => {
   const fetchProducts = async () => {
 
     const response = await axios
-                    .get("https://movie-fake-server.herokuapp.com/products")
-                    .catch((err) => {console.log(err)});
-                    dispatch(getProductsReq(response.data))
+      .get("https://movie-fake-server.herokuapp.com/products")
+      .catch((err) => { console.log(err) });
+    dispatch(getProductsReq(response.data))
 
   }
-  
 
-  
+
+
   useEffect(() => {
     //   dispatch an action to the store
     // dont make call here
@@ -29,7 +30,7 @@ export const Products = () => {
     // dispatch(getproductsData())
   }, []);
 
-let data = products;
+  let data = products;
 
   //    sort by price
   const handleSort = (e) => {
@@ -48,16 +49,24 @@ let data = products;
         {data &&
           data.map((c) => {
             return <div>
-             <div>
-               <img src= {c.image}/>
-             </div>
-             <h3> {c.brand}</h3>
-          
-              </div>;
+
+              <div className="container">
+                <div>
+                  <img src={c.image} />
+                </div>
+                <div>
+                  <h4>{c.brand}</h4>
+                  <p>{c.title}</p>
+                  <p>{c.category}</p>
+                  <p> ₹ {c.price}</p>
+                </div>
+              </div>
+
+            </div>;
           })}
       </div>
-  
-      
+
+
     </>
   );
 };
