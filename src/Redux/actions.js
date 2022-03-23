@@ -13,15 +13,15 @@ export const getProductsReq = (products) => {
 
 // action for get products success
 
-const getProductsSuccess = () => ({});
+// const getProductsSuccess = () => ({});
 
 // action for get products failure
 
-const getProductsFailure = () => ({});
+// const getProductsFailure = () => ({});
 
 // thunk call to fetch products  list
-const getproductsData = () => ({});
+// const getproductsData = () => ({});
 
 // action object for sort  feature
 
-const sortProducts = () => ({});
+// const sortProducts = () => ({});

@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import axios from "axios";
-import "../components/product.css"
+import "../components/product.css";
 
 import { getProductsReq } from "../Redux/actions";
+import { SingleProductList } from "./SingleProduct";
 
 export const Products = () => {
   // to get all products list on component mounts;
 
-  const products = useSelector((state) => state.allProducts.products);
-  const dispatch = useDispatch();
+    const dispatch = useDispatch();
   const fetchProducts = async () => {
 
     const response = await axios
@@ -30,7 +30,7 @@ export const Products = () => {
     // dispatch(getproductsData())
   }, []);
 
-  let data = products;
+ 
 
   //    sort by price
   const handleSort = (e) => {
@@ -45,27 +45,9 @@ export const Products = () => {
         <option value="desc">high to low</option>
       </select>
 
-      <div className="products-list">
-        {data &&
-          data.map((c) => {
-            return <div>
-
-              <div className="container">
-                <div>
-                  <img src={c.image} alt="wait-for Image to load" />
-                </div>
-                <div>
-                  <h4>{c.brand}</h4>
-                  <p>{c.title}</p>
-                  <p>{c.category}</p>
-                  <p> ₹ {c.price}</p>
-                </div>
-              </div>
-
-            </div>;
-          })}
-      </div>
-
+     <div className="products-list">
+     <SingleProductList/>
+     </div>
 
     </>
   );

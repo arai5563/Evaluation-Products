@@ -1,11 +1,12 @@
 .products-list{
     display: grid;
-    /* border: 1px solid red; */
+    width: 95%;
     grid-template-columns: repeat(3,30%);
-    background-color: antiquewhite;
+    background-color: rgb(233, 230, 221);
+    margin: auto;
 }
 
-.products-list> div{
+.products-list > div{
    border: 1px solid black;
    margin: 5px;
 }

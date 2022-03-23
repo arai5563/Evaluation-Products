@@ -1,9 +1,10 @@
 #Container_NAvbar {
-    width: 100%;
+    width: 97%;
     padding: 22px;
     font-size: 2rem;
-    background-color: black;
-    color: rgb(102, 189, 204);
+    font-weight: 600;
+    background-color: rgb(190, 111, 111);
+    color: rgb(32, 32, 29);
     
 }
 
@@ -15,6 +16,7 @@
 #main_nav {
 
     display: flex;
-    margin-left: 30%;
+    /* margin-left: 0%; */
+    justify-content: space-between;
 
 }

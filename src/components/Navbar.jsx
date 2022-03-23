@@ -23,8 +23,8 @@ export const Navbar = () => {
   }
     
   return (
-    <div>
-      <div id="Container_NAvbar">
+    <div id="Container_NAvbar">
+      <div id="main_nav">
           <div onClick={handleHome} className="hero1"> Home </div>
 
           <div onClick={handleAbout} className="hero1"> About </div>
