@@ -24,6 +24,7 @@
     "eject": "react-scripts eject",
     "cypress:open": "cypress open"
   },
+  "homepage":".",
   "eslintConfig": {
     "extends": [
       "react-app",
